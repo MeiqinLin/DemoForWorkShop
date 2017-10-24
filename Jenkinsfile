@@ -28,7 +28,7 @@ pipeline {
            steps {
                echo "starting codeAnalyze with SonarQube......"
                script{
-               def sonarqubeScannerHome = tool name:'SonarScannerTest'
+               def sonarqubeScannerHome = tool name:'TEST'
                withSonarQubeEnv('SonarSeverTest') {
                    sh "${sonarqubeScannerHome}/bin/sonar-scanner"
                }
